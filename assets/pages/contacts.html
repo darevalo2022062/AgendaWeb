@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -15,28 +15,29 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Varela+Round&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/styles_login.css">
-    <title>LinkLoom | Login</title>
+    <link rel="stylesheet" href="../styles/styles_contacts.css">
+    <title>LinkLoom | Contacts</title>
 </head>
 
 <body>
-    <section class="log">
-        <div class="container-img">
-            <div class="container-log">
-                <h2>¡Bienvenido a tu LinkLoom!</h2>
-                <img id="logo" src="./assets/img/contactoPNG.png" alt="">
-                <h1>Login</h1>
-                <form action="">
-                    <label for="">Email</label>
-                    <input type="text" name="" id="" placeholder="Tape your Email">
-                    <label for="">Password</label>
-                    <input type="password" name="" id="" placeholder="Tape your password">
-                    <button>LOGIN</button>
-                </form>
-            </div>
-        </div>
+    <nav class="nav">
+        <h1 class="nav__logo">LinkLoom</h1>
 
-    </section>
+        <a href="#" class="nav__target" id="menu-toggle">
+            <img src="../img/menu.png" alt="" class="nav__icon">
+        </a>
+
+        <div class="nav__links" id="menu">
+            <a href="" class="nav__link">Contacts</a>
+            <a href="" class="nav__link">Favorites</a>
+            <a href="" class="nav__link">Profile</a>
+            <a href="" class="nav__link">ToDo list</a>
+            <br>
+        </div>
+    </nav>
+
 </body>
+
+<script src="../scripts/logica_contacst.js"></script>
 
 </html>
