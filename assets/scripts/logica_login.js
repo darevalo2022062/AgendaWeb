@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var loginButton = document.getElementById('loginButton');
+    loginButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        var email = document.getElementById('emailLogin').value;
+        var password = document.getElementById('passLogin').value;
 
-    const correo = document.getElementById('emailLogin');
-    const pass = document.getElementById('passLogin');
-
-    if (correo === 'admin' & pass === 'admin') {
-        window.location.href = "";
-    } else {
-        alert("Correo o clave incorrectas");
-    }
-
+        if (email === 'admin' && password === 'admin') {
+            window.location.href = 'assets/pages/contacts.html';
+        } else {
+            alert('Correo o contraseña incorrectos');
+        }
+    });
 });
