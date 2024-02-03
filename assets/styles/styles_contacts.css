@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+}
+
+h1,
+h3 {
+    font-family: "Varela Round", sans-serif;
+    font-style: normal;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+}
+
+p,
+h4,
+label,
+:placeholder-shown {
+    font-family: "Lato", sans-serif;
+}
+
+/*NavBar*/
+.nav {
+    padding: 0 40px;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(155, 21, 199, 1) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__links {
+    position: fixed;
+    left: 0;
+    bottom: -9vh;
+    top: 80px;
+    right: 0;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    clip-path: circle(0% at top center);
+    transition: clip-path 0.4s, z-index 0.4s;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav__target img {
+    width: 24px;
+    height: auto;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav__links.active {
+    clip-path: circle(100% at top center);
+    z-index: 1;
+}
+
+/*Contactos*/
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.contact-card {
+    margin: 1.5%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.contact-card:hover {
+    background-color: rgba(0, 212, 255, 0.1);
+}
+
+.contact-card img.contact-person {
+    width: 70px;
+    margin-right: 20px;
+}
+
+.contact-card .contact-details {
+    flex-grow: 1;
+}
+
+.contact-card h3 {
+    margin: 0;
+}
+
+.button-details {
+    width: 24px;
+    cursor: pointer;
+    margin-right: 2vh;
+}
+
+.button-details:hover {
+    opacity: 0.7;
+}
