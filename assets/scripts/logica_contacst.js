@@ -7,3 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    var loginButton = document.getElementById('agregar');
+    loginButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        var form = document.getElementById('formAgregar');
+        form.classList.remove('hidden');
+    });
+});
