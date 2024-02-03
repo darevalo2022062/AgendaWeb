@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkLoom | Favorites</title>
-
     <!--Funte Titulos y subtitulos-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +12,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!--Popop Bonito-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Varela+Round&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="../styles/styles_perfil.css">
-
+    <link rel="stylesheet" href="../styles/styles_list.css">
+    <title>LinkLoom | ToDoList</title>
 </head>
 
-<body onload="cargarDatos()">
+<body>
+
     <nav class="nav">
         <h1 class="nav__logo">LinkLoom</h1>
 
@@ -39,20 +42,22 @@
         </div>
     </nav>
 
-    <section class="profile-section">
-        <div class="profile-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" alt="">
-            <h2>Email</h2>
-            <p id="emailP"></p>
-            <h2>Contraseña</h2>
-            <p id="passP"></p>
-            <h2>Ultimo inicio de sesión</h2>
-            <p id="sesionP"></p>
-        </div>
+    <section class="list-section">
+        <div class="container">
+            <h1>ToDoList</h1>
+            <input type="text" id="taskInput" placeholder="Ingrese una tarea...">
+            <select id="priority">
+              <option value="low">Baja</option>
+              <option value="medium">Media</option>
+              <option value="high">Alta</option>
+            </select>
+            <button onclick="addTask()">Agregar Tarea</button>
+            <ul id="taskList"></ul>
+          </div>
     </section>
 
-</body>
 
-<script src="../scripts/logica_perfil.js"></script>
+    <script src="../scripts/logica_list.js"></script>
+</body>
 
 </html>
