@@ -14,13 +14,20 @@ function addTask() {
     const taskInput = document.getElementById('taskInput');
     const prioritySelect = document.getElementById('priority');
 
-    const task = {
-        name: taskInput.value,
-        priority: prioritySelect.value
-    };
+    if (taskInput.value !== '' && prioritySelect.value !== '') {
+        const task = {
+            name: taskInput.value,
+            priority: prioritySelect.value
+        };
 
-    tasks.push(task);
-    renderTasks();
+
+        tasks.push(task);
+        renderTasks();
+    } else {
+        alert('EL CAMPO ESTA VACIO');
+    }
+
+
     taskInput.value = '';
 }
 
@@ -31,9 +38,11 @@ function deleteTask(index) {
 
 function editTask(index) {
     const newName = prompt('Ingrese el nuevo nombre de la tarea:');
-    if (newName !== null) {
+    if (newName !== '') {
         tasks[index].name = newName;
         renderTasks();
+    } else {
+        alert('EL CAMPO ESTA VACIO');
     }
 }
 
