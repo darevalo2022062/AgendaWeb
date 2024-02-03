@@ -41,6 +41,13 @@ function renderTasks() {
     const taskList = document.getElementById('taskList');
     taskList.innerHTML = '';
 
+    tasks.sort((a, b) => {
+        if (a.priority === 'low') return 1;
+        if (a.priority === 'medium' && b.priority !== 'low') return 1;
+        if (a.priority === 'high' && (b.priority === 'high' || b.priority === 'medium')) return 1;
+        return -1;
+    });
+
     tasks.forEach((task, index) => {
         const li = document.createElement('li');
         li.innerHTML = `
